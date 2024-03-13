@@ -156,7 +156,7 @@ function playVids(videoId) {
       mergeContext.fillStyle = "#000000";
       mergeContext.textAlign = "center";
       mergeContext.font = "30px Arial";
-      mergeContext.fillText("Click to Pause or Resume", (vidWidth * widthRatio) / 2, 50);
+      //mergeContext.fillText("Click to Pause or Resume", (vidWidth * widthRatio) / 2, 50);
     }
     requestAnimationFrame(drawLoop);
   }
