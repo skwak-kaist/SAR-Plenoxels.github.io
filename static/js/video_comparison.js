@@ -147,8 +147,8 @@ function playVids(videoId) {
 
       mergeContext.closePath();
 
-      mergeContext.fillStyle = "#AAAAAA";
-      mergeContext.fill();
+      //mergeContext.fillStyle = "#AAAAAA";
+      //mergeContext.fill();
 
       //mergeContext.fillStyle = "rgba(255, 255, 255, 0.4)";
       //mergeContext.fillRect((vidWidth * widthRatio) / 2 - 180, 15, 360, 50);
