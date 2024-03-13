@@ -204,29 +204,6 @@
   </div>
 </section>
 
-<section class="section" align="center">
-  <div class="container is-widescreen">
-    <h2 class="title is-3 no-bottom">Demo</h2>
-      <div class="video-container" align="center">
-          <video class="video" id="viz_input" loop muted src="./static/video/flower.mp4" onloadeddata="initVideo()"></video>
-          <canvas height=0 class="videoMerge" id="viz_inputMerge"></canvas>
-      </div>
-    <div class="video-select">
-      <a class="video-item" onclick="changeVideo('./static/video/flower.mp4')"><img src="./static/image/flower_gt.png"></a>
-      <a class="video-item" onclick="changeVideo('./static/video/garden.mp4')"><img src="./static/image/garden_gt.png"></a>
-      <a class="video-item" onclick="changeVideo('./static/video/horn.mp4')"><img src="./static/image/horn_gt.png"></a>
-      <a class="video-item" onclick="changeVideo('./static/video/trex.mp4')"><img src="./static/image/trex_gt.png"></a>
-    </div>
-  </div>
-</section>
-<script>
-bulmaCarousel.attach('#results-carousel', {
-  slidesToShow: 2,
-  loop: true,
-  pagination: false,
-});
-</script>
-</section>
 
 <section class="section" align="center">
   <div class="container is-widescreen">
@@ -270,6 +247,33 @@ bulmaCarousel.attach('#results-carousel', {
     <!--/ Abstract. -->
 
   </section>
+
+
+
+
+<section class="section" align="center">
+  <div class="container is-widescreen">
+    <h2 class="title is-3 no-bottom">Demo</h2>
+      <div class="video-container" align="center">
+          <video class="video" id="viz_input" loop muted src="./static/video/flower.mp4" onloadeddata="initVideo()"></video>
+          <canvas height=0 class="videoMerge" id="viz_inputMerge"></canvas>
+      </div>
+    <div class="video-select">
+      <a class="video-item" onclick="changeVideo('./static/video/flower.mp4')"><img src="./static/image/flower_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/video/garden.mp4')"><img src="./static/image/garden_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/video/horns.mp4')"><img src="./static/image/horns_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/video/trex.mp4')"><img src="./static/image/trex_gt.png"></a>
+    </div>
+  </div>
+</section>
+<script>
+bulmaCarousel.attach('#results-carousel', {
+  slidesToShow: 2,
+  loop: true,
+  pagination: false,
+});
+</script>
+</section>
 
 
 <!--
