@@ -208,16 +208,14 @@
   <div class="container is-widescreen">
     <h2 class="title is-3 no-bottom">Demo</h2>
       <div class="video-container" align="center">
-        <a onclick="togglePlay()">
-          <video class="video" id="viz_input" loop muted src="./static/video/garden.mp4" onloadeddata="initVideo()"></video>
+          <video class="video" id="viz_input" loop muted src="./static/video/flower.mp4" onloadeddata="initVideo()"></video>
           <canvas height=0 class="videoMerge" id="viz_inputMerge"></canvas>
-        </a>
       </div>
     <div class="video-select">
-      <a class="video-item" onclick="changeVideo('./static/video/garden.mp4')"><img src="./static/image/garden.png"></a>
-      <a class="video-item" onclick="changeVideo('./static/video/flower.mp4')"><img src="./static/image/flower.png"></a>
-      <a class="video-item" onclick="changeVideo('./static/video/horn.mp4')"><img src="./static/image/horn.png"></a>
-      <a class="video-item" onclick="changeVideo('./static/video/trex.mp4')"><img src="./static/image/trex.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/video/flower.mp4')"><img src="./static/image/flower_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/video/garden.mp4')"><img src="./static/image/garden_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/video/horn.mp4')"><img src="./static/image/horn_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/video/trex.mp4')"><img src="./static/image/trex_gt.png"></a>
     </div>
   </div>
 </section>
