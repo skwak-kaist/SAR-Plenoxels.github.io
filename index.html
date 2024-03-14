@@ -244,30 +244,6 @@
 
   </section>
 
-
-  <section class="section" align="center">
-    <div class="container is-widescreen">
-      <h2 class="title is-3 no-bottom">Demo video</h2>
-        <div class="video-container" align="center">
-            <video class="video" id="viz_input" loop muted src="./static/video/orchids_video.mp4" onloadeddata="initVideo()"></video>
-            <canvas height=0 class="videoMerge" id="viz_inputMerge"></canvas>
-        </div>
-      <div class="video-select">
-        <a class="video-item" onclick="changeVideo('./static/video/kitchen_video.mp4')"><img src="./static/video/kitchen_gt.png"></a>
-        <a class="video-item" onclick="changeVideo('./static/video/orchids_video.mp4')"><img src="./static/video/orchids_gt.png"></a>
-      </div>
-    </div>
-  </section>
-  <script>
-  bulmaCarousel.attach('#results-carousel', {
-    slidesToShow: 2,
-    loop: true,
-    pagination: false,
-  });
-  </script>
-  </section>
-
-
 <section class="section" align="center">
   <div class="container is-widescreen">
     <h2 class="title is-3 no-bottom">Demo image</h2>
@@ -279,8 +255,10 @@
       <a class="video-item" onclick="changeVideo('./static/image/vasedeck.mp4')"><img src="./static/image/vasedeck_gt.png"></a>
       <a class="video-item" onclick="changeVideo('./static/image/garden.mp4')"><img src="./static/image/garden_gt.png"></a>
       <a class="video-item" onclick="changeVideo('./static/image/bonsai.mp4')"><img src="./static/image/bonsai_gt.png"></a>
-      <a class="video-item" onclick="changeVideo('./static/image/trex.mp4')"><img src="./static/image/trex_gt.png"></a>
       <a class="video-item" onclick="changeVideo('./static/image/M60.mp4')"><img src="./static/image/M60_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/image/trex.mp4')"><img src="./static/image/trex_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/image/orchids.mp4')"><img src="./static/image/orchids_gt.png"></a>
+     
     </div>
   </div>
 </section>
