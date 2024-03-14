@@ -246,7 +246,7 @@
 
 <section class="section" align="center">
   <div class="container is-widescreen">
-    <h2 class="title is-3 no-bottom">Demo</h2>
+    <h2 class="title is-3 no-bottom">Visual Comparison</h2>
       <div class="video-container" align="center">
           <video class="video" id="viz_input" loop muted src="./static/image/vasedeck.mp4" onloadeddata="initVideo()"></video>
           <canvas height=0 class="videoMerge" id="viz_inputMerge"></canvas>
@@ -270,6 +270,25 @@ bulmaCarousel.attach('#results-carousel', {
 });
 </script>
 </section>
+
+
+
+<section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3">Quantitative Results</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <image src="./static/image/quantitative_results.png" class="img-responsive" alt="quantitative_results"><br>
+        <div class="content has-text-justified">
+          <p>
+            Quantitative comparison on 6 benchmark datasets. All results were obtained under the same experimental conditions, and conducted using the default configuration of Plenoxels for each dataset. 
+            If there is no configuration for the dataset (such as MipNeRF360-v2), 'custom_alt.json' was used.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
 
 
 
@@ -303,23 +322,7 @@ bulmaCarousel.attach('#results-carousel', {
 
 
 <!--
-<section class="section">
-  <div class="container is-widescreen">
-    <h2 class="title is-3">Quantitative Results</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <image src="./static/image/quantitative_result.png" class="img-responsive" alt="DDNeRF_Architecture_v21"><br>
-        <div class="content has-text-justified">
-          <p>
-            Quantitative comparison on REDS4 for ×4 VSRDB.
-            All results are calculated on the RGB channel. Red and blue colors indicate the best and second-best performance, respectively.
-            The superscript <sup>*</sup> indicates that the model is retrained on the <a target="_blank" rel="noopener noreferrer" href="https://openaccess.thecvf.com/content_CVPRW_2019/html/NTIRE/Nah_NTIRE_2019_Challenge_on_Video_Deblurring_and_Super-Resolution_Dataset_and_CVPRW_2019_paper.html">REDS</a> training  dataset for VSRDB.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
+
 
   <section class="section">
     <div class="container is-widescreen">
