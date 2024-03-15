@@ -227,16 +227,32 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Here is the abstract
-            We propose a novel scene-adaptvie total variation regularizer ..
+            A voxel grid-based radiance field is an effective technique for accelerating the optimization 
+            and rendering speed of neural scene representation. In frameworks such as Plenoxels, Total Variation (TV) regularizer is 
+            effectively utilized to remove some floating artifacts and stabilize the scene optimization. 
+            However, this regularization term simply minimizes the differences of density and feature values between neighboring grid-based
+            regardless of the scene's characteristics, which can lead to blurriness or undesirable distortion near objects, reducing scenen clarity. 
           </p>
           <p>
-            Additionally, .
+            To address this issue, we propose a novel TV regularizer that applies scene-adaptive regularization exploiting scene characteristics from 
+            the explicit representation being trained. Instead of simply enforcing similarity in density with neighboring grids, 
+            we applied regularization differently based on the degree of similarity in color with adjacent grids. 
+            we employed adaptive weighting based on the similarity of ambient terms among the Spherical Harmonics coefficients of Plenoxels, 
+            assuming that the directionless term can well reflect the continuity of surfaces. 
           </p>
+            <p>
+            Through the intensive experiments, we presented that the proposed method can reduce blurry distortion near objects and enhance scene's clarity 
+            while maintaining the original effect of the TV regularization. We demonstrate the effectiveness of our method through comparison of visual quality and
+            quantitative metrics on 5 benchmark datasets with various characteristics and 1 custom dataset. 
+            </p>
+            <p>
+              Additionally, we provide analytic results that visualize the spatial distribution of the proposed weights and ablation experiments with 
+              variations in weight design, in order to show the validity of our method. Furthermore, by applying the idea of the proposed method to K-Planes, 
+              a representative framework of recent 2D planar decomposition-based approachs, we presented the scalability that our method can be beneficial not only for Plenoxels 
+              but also for other scene representation frameworks using voxel grids. 
 
-          <p>
+            </p>
 
-          </p>
         </div>
       </div>
     </div>
@@ -255,8 +271,8 @@
       <a class="video-item" onclick="changeVideo('./static/image/vasedeck.mp4')"><img src="./static/image/vasedeck_gt.png"></a>
       <!-- <a class="video-item" onclick="changeVideo('./static/image/garden.mp4')"><img src="./static/image/garden_gt.png"></a> -->
       <a class="video-item" onclick="changeVideo('./static/image/bonsai2.mp4')"><img src="./static/image/bonsai2_gt.png"></a>
-      <a class="video-item" onclick="changeVideo('./static/image/M60.mp4')"><img src="./static/image/M60_gt.png"></a>
       <a class="video-item" onclick="changeVideo('./static/image/trex.mp4')"><img src="./static/image/trex_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/image/M60.mp4')"><img src="./static/image/M60_gt.png"></a>
       <!-- <a class="video-item" onclick="changeVideo('./static/image/orchids.mp4')"><img src="./static/image/orchids_gt.png"></a> -->
      
     </div>
@@ -281,7 +297,7 @@ bulmaCarousel.attach('#results-carousel', {
         <image src="./static/image/quantitative_results.png" class="img-responsive" alt="quantitative_results"><br>
         <div class="content has-text-justified">
           <p>
-            Quantitative comparison on 6 benchmark datasets. All results were obtained under the same experimental conditions, and conducted using the default configuration of Plenoxels for each dataset. 
+            Quantitative comparison on 5 benchmark datasets and 1 custom dataset. All results were obtained under the same experimental conditions, and conducted using the default configuration of Plenoxels for each dataset. 
             If there is no configuration for the dataset (such as MipNeRF360-v2), 'custom_alt.json' was used.
           </p>
         </div>
