@@ -230,8 +230,8 @@
             A voxel grid-based radiance field is an effective technique for accelerating the optimization 
             and rendering speed of neural scene representation. In frameworks such as Plenoxels, Total Variation (TV) regularizer is 
             effectively utilized to remove some floating artifacts and stabilize the scene optimization. 
-            However, this regularization term simply minimizes the differences of density and feature values between neighboring grid-based
-            regardless of the scene's characteristics, which can lead to blurriness or undesirable distortion near objects, reducing scenen clarity. 
+            However, this regularization term naively minimizes the differences of density and feature values between neighboring grid-based
+            without consideration of the scene's characteristics, which can lead to blurriness or undesirable distortion near objects, reducing scenen clarity. 
           </p>
           <p>
             To address this issue, we propose a novel TV regularizer that applies scene-adaptive regularization exploiting scene characteristics from 
@@ -264,15 +264,15 @@
   <div class="container is-widescreen">
     <h2 class="title is-3 no-bottom">Visual Comparison</h2>
       <div class="video-container" align="center">
-          <video class="video" id="viz_input" loop muted src="./static/image/vasedeck.mp4" onloadeddata="initVideo()"></video>
+          <video class="video" id="viz_input" loop muted src="./static/image/vasedeck3.mp4" onloadeddata="initVideo()"></video>
           <canvas height=0 class="videoMerge" id="viz_inputMerge"></canvas>
       </div>
     <div class="video-select">
-      <a class="video-item" onclick="changeVideo('./static/image/vasedeck.mp4')"><img src="./static/image/vasedeck_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/image/vasedeck3.mp4')"><img src="./static/image/vasedeck_gt.png"></a>
       <!-- <a class="video-item" onclick="changeVideo('./static/image/garden.mp4')"><img src="./static/image/garden_gt.png"></a> -->
-      <a class="video-item" onclick="changeVideo('./static/image/bonsai2.mp4')"><img src="./static/image/bonsai2_gt.png"></a>
-      <a class="video-item" onclick="changeVideo('./static/image/trex.mp4')"><img src="./static/image/trex_gt.png"></a>
-      <a class="video-item" onclick="changeVideo('./static/image/M60_2.mp4')"><img src="./static/image/M60_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/image/bonsai3.mp4')"><img src="./static/image/bonsai2_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/image/trex3.mp4')"><img src="./static/image/trex_gt.png"></a>
+      <a class="video-item" onclick="changeVideo('./static/image/M603.mp4')"><img src="./static/image/M60_gt.png"></a>
       <!-- <a class="video-item" onclick="changeVideo('./static/image/orchids.mp4')"><img src="./static/image/orchids_gt.png"></a> -->
      
     </div>
@@ -297,7 +297,7 @@ bulmaCarousel.attach('#results-carousel', {
         <image src="./static/image/quantitative_results.png" class="img-responsive" alt="quantitative_results"><br>
         <div class="content has-text-justified">
           <p>
-            Quantitative comparison on 5 benchmark datasets and 1 custom dataset. All results were obtained under the same experimental conditions, and conducted using the default configuration of Plenoxels for each dataset. 
+            Quantitative comparison on 5 benchmark datasets and 1 custom dataset. All results were obtained under the same experimental conditions, and using the default configuration of Plenoxels for each dataset. 
             If there is no configuration for the dataset (such as MipNeRF360-v2), 'custom_alt.json' was used.
           </p>
         </div>
